@@ -2,22 +2,63 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="hero block">
+  <div class="container">
+    <h1>Unsurpassed Reliability for Critical Chemical Dosing</h1>
+    <p>Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. </p>
+    <a href="" class="btn btn-lg btn-primary">
+      Cónoce nuestros productos
+    </a>
+  </div>
+</div>
+<div class="block">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h2>Quienes Somos</h2>
+        <p>
+          Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida.
+        </p>
+        <p>
+          Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue
+        </p>
+      </div>
+      <div class="col-sm-6">
+        img
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block accent-block">
+  <div class="container">
+    <div class="row">
+      <h2 class="text-center">Nuestros Productos</h2>
+      <div class="col-sm-10 col-sm-offset-1">
+        <div class="row">
+          <div class="col-sm-4">
+            <ul>
+              <li>Bombas</li>
+              <li>Valvulas</li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <ul>
+              <li>Tuberias</li>
+              <li>Medios Filtrantes</li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <ul>
+              <li>Empaques</li>
+              <li>Empaquetaduras</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="#" alt="">
+</div>
+<div class="container">
+  <h2>Nuestras Marcas</h2>
 </div>
