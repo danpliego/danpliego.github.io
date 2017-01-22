@@ -21,19 +21,24 @@ ul {
 
 .main-menu {
   background: $background-color;
-  min-height: 75px;
+  min-height: 85px;
   border-bottom: 0;
   border-radius: 0;
   margin-bottom: 0;
   .navbar-nav > li > a {
-    padding: 26px;
+    padding: 31px 25px;
     color: $grey-color;
     border-bottom: 3px solid $background-color;
+    font-size: 1.1em;
     &:hover, &:focus, &:active {
       color: $grey-color;
       background: none;
       border-bottom: 3px solid $brand-dark-color;
     }
+  }
+  .navbar-brand {
+    padding-top: 21px;
+    height: auto;
   }
 }
 
@@ -126,6 +131,14 @@ ul {
       font-size: 1.5em;
     }
     img {
+      position: absolute;
+      z-index: 1;
       width: 100%;
+    }
+  }
+  .home-brands {
+    padding-top: 400px;
+    img {
+      margin: 30px 0;
     }
   }
