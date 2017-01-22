@@ -6,27 +6,28 @@ permalink: /contacto/
 
 <div class="section-content">
   <form action="https://formspree.io/danielpliego@gmail.com" method="POST" class="form-horizontal">
+    <input type="text" name="_gotcha" style="display:none" />
     <input type="hidden" name="_next" value="https://danpliego.github.io/gracias" />
     <div class="form-group">
-      <label class="control-label col-sm-3" for="name">Nombre</label>
+      <label class="control-label col-sm-3" for="name"  required>Nombre</label>
       <div class="col-sm-4">
         <input type="text" name="name" class="form-control">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-3" for="title">Titulo</label>
+      <label class="control-label col-sm-3" for="title"  required>Titulo</label>
       <div class="col-sm-4">
         <input type="text" name="title" class="form-control">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-3" for="compania">Compañia</label>
+      <label class="control-label col-sm-3" for="compania"  required>Compañia</label>
       <div class="col-sm-4">
         <input type="text" name="compania" class="form-control">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-3" for="direccion">Dirección</label>
+      <label class="control-label col-sm-3" for="direccion"  required>Dirección</label>
       <div class="col-sm-4">
         <input type="text" name="direccion" class="form-control">
       </div>
@@ -56,13 +57,13 @@ permalink: /contacto/
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-3" for="telefono">Teléfono</label>
+      <label class="control-label col-sm-3" for="telefono"  required>Teléfono</label>
       <div class="col-sm-4">
         <input type="text" name="telefono" class="form-control">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-3" for="_replyto">Correo</label>
+      <label class="control-label col-sm-3" for="_replyto"  required>Correo</label>
       <div class="col-sm-4">
         <input type="text" name="_replyto" class="form-control">
       </div>
