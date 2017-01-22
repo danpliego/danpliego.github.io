@@ -1,3 +1,4 @@
+
 /**
  * Reset some basic elements
  */
@@ -13,10 +14,13 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+html, body, * {
+  font-family: 'Work Sans', sans-serif;
+}
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
-  background-color: $background-color;
+  background-color: red;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -25,7 +29,12 @@ body {
   font-kerning: normal;
 }
 
-
+a {
+  color: $brand-color;
+  &:hover, &:focus, &:active {
+    color: $brand-dark-color;
+  }
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -47,21 +56,6 @@ img {
   vertical-align: middle;
 }
 
-
-
-/**
- * Figures
- */
-figure > img {
-  display: block;
-}
-
-figcaption {
-  font-size: $small-font-size;
-}
-
-
-
 /**
  * Lists
  */
@@ -76,13 +70,14 @@ li {
   }
 }
 
-
-
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+  font-weight: bold;
+}
+h1 {
+  font-size: 48px;
 }
 
 /**
@@ -104,4 +99,16 @@ h1, h2, h3, h4, h5, h6 {
   path {
     fill: $grey-color;
   }
+}
+
+// Buttons
+
+.btn {
+  border-radius: 4px!important;
+  box-shadow: 0 5px 10px rgba(0,0,0,.05);
+  border: 0;
+}
+.btn-lg {
+  padding: 20px;
+  font-size: 18px;
 }
