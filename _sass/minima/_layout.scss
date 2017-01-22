@@ -1,9 +1,24 @@
+// helpers
+
 .block {
   padding: 60px 0;
 }
 .block-sm {
   padding: 30px 0;
 }
+.accent-block {
+  background: $brand-color;
+  color: $background-color;
+}
+.brand-color {
+  color: $brand-color!important;
+}
+ul {
+  list-style-image: url('images/list-style.png');
+}
+
+// Main Menu
+
 .main-menu {
   background: $background-color;
   min-height: 75px;
@@ -21,62 +36,96 @@
     }
   }
 }
-.hero, .accent-block {
-  color: $background-color;
-  .btn {
+
+// Footer
+
+  .site-footer {
+    background: $grey-color;
+    color: $background-color;
+  }
+
+// Section Title
+
+  .section-title {
+    padding: 40px 0;
+    color: $background-color;
+    padding-bottom: 120px;
+    margin-bottom: -80px;
+  }
+  .section-content {
     background: $background-color;
-    color: $brand-color;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+    margin-bottom: 60px;
   }
-}
-.hero, .hero:before, .hero:after {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right bottom,
-    color-stop(0, #3B6FFF),
-    color-stop(1, #3556B2)
-  );
-  background-image: -o-linear-gradient(right bottom, #3B6FFF 0%, #3556B2 100%);
-  background-image: -moz-linear-gradient(right bottom, #3B6FFF 0%, #3556B2 100%);
-  background-image: -webkit-linear-gradient(right bottom, #3B6FFF 0%, #3556B2 100%);
-  background-image: -ms-linear-gradient(right bottom, #3B6FFF 0%, #3556B2 100%);
-  background-image: linear-gradient(to right bottom, #3B6FFF 0%, #3556B2 100%);
-}
-.hero {
-  padding: 90px 0;
-  position: relative;
-  overflow: hidden;
-  &:before, &:after {
-    transform: skewX(-30deg);
-    transform-origin: 100%;
-    content: ' ';
-    display: block;
-    left: 0;
-    top: 0%;
-    bottom: 0%;
-    position: absolute;
-    transform: skewX(-30deg);
-    transform-origin: 100%;
+
+
+// Home
+
+  .hero, .accent-block {
+    color: $background-color;
+    .btn {
+      background: $background-color;
+      color: $brand-color;
+    }
   }
-  &:after {
-    width: 60%;
-    z-index: 2;
+  .hero, .hero:before, .hero:after, .section-title {
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right bottom,
+      color-stop(0, #3B6FFF),
+      color-stop(1, #3556B2)
+    );
+    background-image: -o-linear-gradient(right bottom, #3B6FFF 0%, #3556B2 100%);
+    background-image: -moz-linear-gradient(right bottom, #3B6FFF 0%, #3556B2 100%);
+    background-image: -webkit-linear-gradient(right bottom, #3B6FFF 0%, #3556B2 100%);
+    background-image: -ms-linear-gradient(right bottom, #3B6FFF 0%, #3556B2 100%);
+    background-image: linear-gradient(to right bottom, #3B6FFF 0%, #3556B2 100%);
   }
-  &:before {
-    width: 30%;
-    z-index: 3;
-  }
-  .hero-content {
+  .hero {
+    padding: 90px 0;
     position: relative;
-    z-index: 4;
+    overflow: hidden;
+    &:before, &:after {
+      transform: skewX(-30deg);
+      transform-origin: 100%;
+      content: ' ';
+      display: block;
+      left: 0;
+      top: 0%;
+      bottom: 0%;
+      position: absolute;
+      transform: skewX(-30deg);
+      transform-origin: 100%;
+    }
+    &:after {
+      width: 60%;
+      z-index: 2;
+    }
+    &:before {
+      width: 30%;
+      z-index: 3;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 4;
+    }
+    .hero-image {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      top: 0;
+      width: 700px;
+      background: $background-color url('images/img-hero.png');
+      background-size: cover;
+    }
   }
-  .hero-image {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    top: 0;
-    width: 700px;
-    background: $background-color url('images/img-hero.png');
-    background-size: cover;
+  .home-products {
+    ul li {
+      font-size: 1.5em;
+    }
+    img {
+      width: 100%;
+    }
   }
-}
