@@ -25,6 +25,10 @@ ul {
   border-bottom: 0;
   border-radius: 0;
   margin-bottom: 0;
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+  }
   .navbar-nav > li > a {
     padding: 31px 25px;
     color: $grey-color;
@@ -36,8 +40,18 @@ ul {
       border-bottom: 3px solid $brand-dark-color;
     }
   }
+  .navbar-right > li > a {
+    font-size: 1.5em;
+    color: $brand-color;
+    font-weight: bold;
+    &:hover, &:focus, &:active {
+      color: $brand-dark-color;
+      border-bottom: 3px solid $background-color;
+    }
+  }
   .navbar-brand {
     padding-top: 21px;
+    padding-right: 20px;
     height: auto;
   }
 }
@@ -55,7 +69,10 @@ ul {
     padding: 40px 0;
     color: $background-color;
     padding-bottom: 120px;
-    margin-bottom: -80px;
+    margin-bottom: -100px;
+    a, a:hover, a:focus, a:active {
+      color: $background-color;
+    }
   }
   .section-content {
     background: $background-color;
@@ -72,9 +89,13 @@ ul {
     .btn {
       background: $background-color;
       color: $brand-color;
+      &:hover, &:active, &:focus {
+        background: $grey-light-color;
+        color: $brand-color;
+      }
     }
   }
-  .hero, .hero:before, .hero:after, .section-title {
+  .hero, .hero:before, .hero:after, .section-title, .btn-primary {
     background-image: -webkit-gradient(
       linear,
       left top,
@@ -87,6 +108,16 @@ ul {
     background-image: -webkit-linear-gradient(right bottom, #3B6FFF 0%, #3556B2 100%);
     background-image: -ms-linear-gradient(right bottom, #3B6FFF 0%, #3556B2 100%);
     background-image: linear-gradient(to right bottom, #3B6FFF 0%, #3556B2 100%);
+  }
+  .btn-default {
+    background: $grey-light-color;
+    color: $brand-color;
+    border: 1px solid darken($grey-light-color, 3%);
+    &:hover, &:focus, &:active {
+      color: $brand-color;
+      background: darken($grey-light-color, 1%);
+      border: 1px solid darken($grey-light-color, 3%);
+    }
   }
   .hero {
     padding: 90px 0;
@@ -127,18 +158,45 @@ ul {
     }
   }
   .home-products {
+    margin-bottom: -50px;
     ul li {
       font-size: 1.5em;
     }
     img {
-      position: absolute;
-      z-index: 1;
       width: 100%;
     }
   }
   .home-brands {
-    padding-top: 400px;
+    border-top: 1px solid $grey-light-color;
     img {
       margin: 30px 0;
+    }
+  }
+
+// Productos Index
+
+  .productos {
+    .block-title {
+      background: $brand-color;
+      display: block;
+      color: $background-color;
+      margin: 0;
+      padding: 15px 15px 15px 30px;
+    }
+    .section-content {
+      padding: 0;
+    }
+    .block-sm {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+  .productos-index {
+    .col-sm-8 {
+      padding-left: 0;
+    }
+    .product-picture {
+      padding-right: 0;
+      border-right: 1px solid $grey-light-color;
     }
   }
